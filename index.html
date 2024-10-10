@@ -3,34 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Australian Horticulture Visualization</title>
+    <title>Aussie Horticulture Summary</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #filter {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Australian Horticulture Visualization</h1>
 
-    <!-- This is where your chart will be rendered -->
-    <div id="vis"></div>
+<h1>Aussie Horticulture Summary (2022-23) by State</h1>
 
-    <script type="text/javascript">
-        const spec = {
-            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "description": "A simple bar chart showing horticulture data",
-            "data": {
-                "url": "Table_1.csv",  // Replace with the path to your CSV file
-                "format": {"type": "csv"}
+<label for="state-select">Choose a state:</label>
+<select id="state-select">
+    <option value="All">All</option>
+    <option value="New South Wales">New South Wales</option>
+    <option value="Victoria">Victoria</option>
+    <option value="Queensland">Queensland</option>
+    <option value="South Australia">South Australia</option>
+    <option value="Western Australia">Western Australia</option>
+    <option value="Tasmania">Tasmania</option>
+    <option value="Northern Territory">Northern Territory</option>
+</select>
+
+<div id="map"></div>
+<div id="bar-chart"></div>
+<div id="pie-chart"></div>
+
+<script>
+    const initialState = "All"; // initial states set as all
+
+    // map
+    const mapSpec = (state) => ({
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": "Australian Horticulture Summary (2022-23) by State",
+        "width": 800,
+        "height": 450,
+        "projection": {"type": "mercator"},
+        "data": {
+            "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
+            "format": {"type": "csv"}
+        },
+        "transform": [
+            {
+                "calculate": "datum['2022-23']",
+                "as": "FarmGateValue"
             },
-            "mark": "bar",
-            "encoding": {
-                "x": {"field": "Region", "type": "nominal", "axis": {"labelAngle": 0}},
-                "y": {"field": "Value", "type": "quantitative"},
-                "color": {"field": "Category", "type": "nominal"}
+            {
+                "filter": {
+                    "field": "Region",
+                    "oneOf": state === "All" ? [
+                        "New South Wales", 
+                        "Victoria", 
+                        "Queensland", 
+                        "South Australia", 
+                        "Western Australia", 
+                        "Tasmania", 
+                        "Northern Territory"
+                    ] : [state]
+                }
+            },
+            {
+                "lookup": "Region",
+                "from": {
+                    "data": {
+                        "values": [
+                            {"Region": "New South Wales", "Longitude": 151.2093, "Latitude": -33.8688},
+                            {"Region": "Victoria", "Longitude": 144.9631, "Latitude": -37.8136},
+                            {"Region": "Queensland", "Longitude": 153.0290, "Latitude": -27.4701},
+                            {"Region": "South Australia", "Longitude": 138.6010, "Latitude": -34.9285},
+                            {"Region": "Western Australia", "Longitude": 115.8575, "Latitude": -31.9505},
+                            {"Region": "Tasmania", "Longitude": 147.4390, "Latitude": -42.8821},
+                            {"Region": "Northern Territory", "Longitude": 133.7751, "Latitude": -12.4634}
+                        ]
+                    },
+                    "key": "Region",
+                    "fields": ["Longitude", "Latitude"]
+                }
             }
-        };
+        ],
+        "layer": [
+            {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/ne_110m.json",
+                    "format": {
+                        "type": "topojson",
+                        "feature": "ne_110m_admin_0_countries"
+                    }
+                },
+                "mark": {"type": "geoshape", "fill": "#eee", "stroke": "gray"},
+                "encoding": {
+                    "tooltip": [
+                        {"field": "properties.NAME", "type": "nominal", "title": "Country"}
+                    ]
+                }
+            },
+            {
+                "mark": "circle",
+                "encoding": {
+                    "longitude": {"field": "Longitude", "type": "quantitative"},
+                    "latitude": {"field": "Latitude", "type": "quantitative"},
+                    "size": {
+                        "field": "FarmGateValue",
+                        "type": "quantitative",
+                        "scale": {"range": [100, 1000]},
+                        "legend": {"title": "Farm Gate Value ($m)"}
+                    },
+                    "color": {
+                        "field": "FarmGateValue",
+                        "type": "quantitative",
+                        "scale": {
+                            "domain": [0, 6000],
+                            "range": ["#fee5d9", "#99000d"]
+                        },
+                        "legend": {"title": "Farm Gate Value ($m)"}
+                    },
+                    "tooltip": [
+                        {"field": "Region", "type": "nominal", "title": "State"},
+                        {"field": "FarmGateValue", "type": "quantitative", "title": "Farm Gate Value ($m)"}
+                    ]
+                }
+            }
+        ]
+    });
 
-        vegaEmbed('#vis', spec);
-    </script>
+    // bar chart
+    const barChartSpec = (state) => ({
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": "Farm Gate Value by State",
+        "width": 800,
+        "height": 400,
+        "data": {
+            "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
+            "format": {"type": "csv"}
+        },
+        "transform": [
+            {
+                "calculate": "datum['2022-23']",
+                "as": "FarmGateValue"
+            },
+            {
+                "filter": {
+                    "field": "Region",
+                    "oneOf": state === "All" ? [
+                        "New South Wales", 
+                        "Victoria", 
+                        "Queensland", 
+                        "South Australia", 
+                        "Western Australia", 
+                        "Tasmania", 
+                        "Northern Territory"
+                    ] : [state]
+                }
+            }
+        ],
+        "mark": "bar",
+        "encoding": {
+            "x": {
+                "field": "Region", 
+                "type": "ordinal",
+                "axis": {"title": "State"}
+            },
+            "y": {
+                "field": "FarmGateValue", 
+                "type": "quantitative",
+                "axis": {"title": "Farm Gate Value ($m)"}
+            },
+            "color": {
+                "field": "FarmGateValue", 
+                "type": "quantitative",
+                "scale": {
+                    "domain": [0, 6000],
+                    "range": ["#fee5d9", "#99000d"]
+                }
+            },
+            "tooltip": [
+                {"field": "Region", "type": "nominal", "title": "State"},
+                {"field": "FarmGateValue", "type": "quantitative", "title": "Farm Gate Value ($m)"}
+            ]
+        }
+    });
+
+    // pie chart
+const pieChartSpec = () => ({
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Farm Gate Value Distribution by State",
+    "width": 400,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
+        "format": {"type": "csv"}
+    },
+    "transform": [
+        {
+            "calculate": "datum['2022-23']",
+            "as": "FarmGateValue"
+        }
+    ],
+    "mark": {"type": "arc", "innerRadius": 50}, // Creating a donut chart using innerRadius
+    "encoding": {
+        "theta": {"field": "FarmGateValue", "type": "quantitative"},
+        "color": {"field": "Region", "type": "nominal"},
+        "tooltip": [
+            {"field": "Region", "type": "nominal", "title": "State"},
+            {"field": "FarmGateValue", "type": "quantitative", "title": "Farm Gate Value ($m)"}
+        ]
+    }
+});
+
+
+function renderVisualizations(state) {
+    vegaEmbed('#map', mapSpec(state)).then(result => {}).catch(console.error);
+    vegaEmbed('#bar-chart', barChartSpec(state)).then(result => {}).catch(console.error);
+    vegaEmbed('#pie-chart', pieChartSpec()).then(result => {}).catch(console.error);
+}
+
+
+    // Initial Render
+    renderVisualizations(initialState);
+
+    // Monitor drop-down menu changes
+    document.getElementById('state-select').addEventListener('change', function() {
+        const selectedState = this.value;
+        renderVisualizations(selectedState);
+    });
+
+</script>
+
 </body>
 </html>
