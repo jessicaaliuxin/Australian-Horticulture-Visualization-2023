@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australian Horticulture Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <h1>Australian Horticulture Visualization</h1>
+
+    <!-- This is where your chart will be rendered -->
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+        const spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "description": "A simple bar chart showing horticulture data",
+            "data": {
+                "url": "Table_1.csv",  // Replace with the path to your CSV file
+                "format": {"type": "csv"}
+            },
+            "mark": "bar",
+            "encoding": {
+                "x": {"field": "Region", "type": "nominal", "axis": {"labelAngle": 0}},
+                "y": {"field": "Value", "type": "quantitative"},
+                "color": {"field": "Category", "type": "nominal"}
+            }
+        };
+
+        vegaEmbed('#vis', spec);
+    </script>
+</body>
+</html>
