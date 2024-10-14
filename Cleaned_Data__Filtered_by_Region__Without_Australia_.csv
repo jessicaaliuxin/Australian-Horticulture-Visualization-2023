@@ -1,0 +1,298 @@
+,Region codes,Region,Data item,2022-23
+2,1,New South Wales,Apples - Production (t),"38,953"
+3,1,New South Wales,Apples - Farm gate value ($m),88.4
+4,2,Victoria,Apples - Production (t),"130,177"
+5,2,Victoria,Apples - Farm gate value ($m),295.3
+6,3,Queensland,Apples - Production (t),"30,075"
+7,3,Queensland,Apples - Farm gate value ($m),68.2
+8,4,South Australia,Apples - Production (t),"27,256"
+9,4,South Australia,Apples - Farm gate value ($m),61.8
+10,5,Western Australia,Apples - Production (t),"29,193"
+11,5,Western Australia,Apples - Farm gate value ($m),66.2
+12,6,Tasmania,Apples - Production (t),"29,523"
+13,6,Tasmania,Apples - Farm gate value ($m),67.0
+16,1,New South Wales,Apricots - Production (t),81
+17,1,New South Wales,Apricots - Farm gate value ($m),0.3
+18,2,Victoria,Apricots - Production (t),"1,391"
+19,2,Victoria,Apricots - Farm gate value ($m),5.3
+20,3,Queensland,Apricots - Production (t),38
+21,3,Queensland,Apricots - Farm gate value ($m),0.1
+22,4,South Australia,Apricots - Production (t),569
+23,4,South Australia,Apricots - Farm gate value ($m),2.2
+24,5,Western Australia,Apricots - Production (t),66
+25,5,Western Australia,Apricots - Farm gate value ($m),0.3
+26,6,Tasmania,Apricots - Production (t),351
+27,6,Tasmania,Apricots - Farm gate value ($m),1.3
+30,1,New South Wales,Avocados - Production (t),"12,966"
+31,1,New South Wales,Avocados - Farm gate value ($m),63.0
+32,2,Victoria,Avocados - Production (t),"3,615"
+33,2,Victoria,Avocados - Farm gate value ($m),17.6
+34,3,Queensland,Avocados - Production (t),"74,957"
+35,3,Queensland,Avocados - Farm gate value ($m),364.3
+36,4,South Australia,Avocados - Production (t),"2,994"
+37,4,South Australia,Avocados - Farm gate value ($m),14.6
+38,5,Western Australia,Avocados - Production (t),"20,782"
+39,5,Western Australia,Avocados - Farm gate value ($m),101.0
+40,6,Tasmania,Avocados - Production (t),70
+41,6,Tasmania,Avocados - Farm gate value ($m),0.3
+44,1,New South Wales,Bananas - Production (t),"14,970"
+45,1,New South Wales,Bananas - Farm gate value ($m),23.3
+46,3,Queensland,Bananas - Production (t),"351,796"
+47,3,Queensland,Bananas - Farm gate value ($m),548.3
+48,5,Western Australia,Bananas - Production (t),"6,549"
+49,5,Western Australia,Bananas - Farm gate value ($m),10.2
+50,7,Northern Territory,Bananas - Production (t),936
+51,7,Northern Territory,Bananas - Farm gate value ($m),1.5
+54,1,New South Wales,Blueberries - Production (t),"17,301"
+55,1,New South Wales,Blueberries - Farm gate value ($m),361.4
+56,2,Victoria,Blueberries - Production (t),404
+57,2,Victoria,Blueberries - Farm gate value ($m),8.4
+58,3,Queensland,Blueberries - Production (t),758
+59,3,Queensland,Blueberries - Farm gate value ($m),15.8
+60,4,South Australia,Blueberries - Production (t),101
+61,4,South Australia,Blueberries - Farm gate value ($m),2.1
+62,5,Western Australia,Blueberries - Production (t),435
+63,5,Western Australia,Blueberries - Farm gate value ($m),9.1
+64,6,Tasmania,Blueberries - Production (t),"1,213"
+65,6,Tasmania,Blueberries - Farm gate value ($m),25.3
+68,1,New South Wales,Cherries - Production (t),"4,179"
+69,1,New South Wales,Cherries - Farm gate value ($m),72.6
+70,2,Victoria,Cherries - Production (t),"4,262"
+71,2,Victoria,Cherries - Farm gate value ($m),74.0
+72,3,Queensland,Cherries - Production (t),38
+73,3,Queensland,Cherries - Farm gate value ($m),0.7
+74,4,South Australia,Cherries - Production (t),"2,373"
+75,4,South Australia,Cherries - Farm gate value ($m),41.2
+76,5,Western Australia,Cherries - Production (t),469
+77,5,Western Australia,Cherries - Farm gate value ($m),8.1
+78,6,Tasmania,Cherries - Production (t),"3,794"
+79,6,Tasmania,Cherries - Farm gate value ($m),65.9
+82,1,New South Wales,Custard Apples - Production (t),641
+83,1,New South Wales,Custard Apples - Farm gate value ($m),4.3
+84,3,Queensland,Custard Apples - Production (t),683
+85,3,Queensland,Custard Apples - Farm gate value ($m),4.6
+88,1,New South Wales,Dried grapes - Production (t),"2,411"
+89,1,New South Wales,Dried grapes - Farm gate value ($m),5.0
+90,2,Victoria,Dried grapes - Production (t),"11,347"
+91,2,Victoria,Dried grapes - Farm gate value ($m),23.7
+92,4,South Australia,Dried grapes - Production (t),426
+93,4,South Australia,Dried grapes - Farm gate value ($m),0.9
+96,1,New South Wales,Grapefruit - Production (t),"4,130"
+97,1,New South Wales,Grapefruit - Farm gate value ($m),7.3
+98,2,Victoria,Grapefruit - Production (t),805
+99,2,Victoria,Grapefruit - Farm gate value ($m),1.4
+100,3,Queensland,Grapefruit - Production (t),"1,435"
+101,3,Queensland,Grapefruit - Farm gate value ($m),2.5
+102,4,South Australia,Grapefruit - Production (t),"1,785"
+103,4,South Australia,Grapefruit - Farm gate value ($m),3.2
+104,5,Western Australia,Grapefruit - Production (t),665
+105,5,Western Australia,Grapefruit - Farm gate value ($m),1.2
+106,7,Northern Territory,Grapefruit - Production (t),210
+107,7,Northern Territory,Grapefruit - Farm gate value ($m),0.4
+110,1,New South Wales,Kiwifruit - Production (t),393
+111,1,New South Wales,Kiwifruit - Farm gate value ($m),2.1
+112,2,Victoria,Kiwifruit - Production (t),"2,831"
+113,2,Victoria,Kiwifruit - Farm gate value ($m),15.3
+114,3,Queensland,Kiwifruit - Production (t),315
+115,3,Queensland,Kiwifruit - Farm gate value ($m),1.7
+116,4,South Australia,Kiwifruit - Production (t),354
+117,4,South Australia,Kiwifruit - Farm gate value ($m),1.9
+120,1,New South Wales,Lemons and limes - Production (t),"10,475"
+121,1,New South Wales,Lemons and limes - Farm gate value ($m),22.0
+122,2,Victoria,Lemons and limes - Production (t),"7,716"
+123,2,Victoria,Lemons and limes - Farm gate value ($m),16.2
+124,3,Queensland,Lemons and limes - Production (t),"42,137"
+125,3,Queensland,Lemons and limes - Farm gate value ($m),88.6
+126,4,South Australia,Lemons and limes - Production (t),"9,115"
+127,4,South Australia,Lemons and limes - Farm gate value ($m),19.2
+128,5,Western Australia,Lemons and limes - Production (t),"1,639"
+129,5,Western Australia,Lemons and limes - Farm gate value ($m),3.5
+130,7,Northern Territory,Lemons and limes - Production (t),"2,039"
+131,7,Northern Territory,Lemons and limes - Farm gate value ($m),4.3
+134,1,New South Wales,Lychees - Production (t),32
+135,1,New South Wales,Lychees - Farm gate value ($m),0.5
+136,3,Queensland,Lychees - Production (t),"3,183"
+137,3,Queensland,Lychees - Farm gate value ($m),47.3
+140,1,New South Wales,Mandarins - Production (t),"24,220"
+141,1,New South Wales,Mandarins - Farm gate value ($m),45.0
+142,2,Victoria,Mandarins - Production (t),"25,515"
+143,2,Victoria,Mandarins - Farm gate value ($m),47.4
+144,3,Queensland,Mandarins - Production (t),"98,560"
+145,3,Queensland,Mandarins - Farm gate value ($m),183.0
+146,4,South Australia,Mandarins - Production (t),"41,160"
+147,4,South Australia,Mandarins - Farm gate value ($m),76.4
+148,5,Western Australia,Mandarins - Production (t),"8,960"
+149,5,Western Australia,Mandarins - Farm gate value ($m),16.6
+152,1,New South Wales,Mangoes - Production (t),740
+153,1,New South Wales,Mangoes - Farm gate value ($m),2.1
+154,2,Victoria,Mangoes - Production (t),73
+155,2,Victoria,Mangoes - Farm gate value ($m),0.2
+156,3,Queensland,Mangoes - Production (t),"34,883"
+157,3,Queensland,Mangoes - Farm gate value ($m),96.8
+158,4,South Australia,Mangoes - Production (t),28
+159,4,South Australia,Mangoes - Farm gate value ($m),0.1
+160,5,Western Australia,Mangoes - Production (t),"2,501"
+161,5,Western Australia,Mangoes - Farm gate value ($m),6.9
+162,7,Northern Territory,Mangoes - Production (t),"36,675"
+163,7,Northern Territory,Mangoes - Farm gate value ($m),101.8
+166,1,New South Wales,Muskmelons - Production (t),"19,296"
+167,1,New South Wales,Muskmelons - Farm gate value ($m),28.8
+168,2,Victoria,Muskmelons - Production (t),"1,809"
+169,2,Victoria,Muskmelons - Farm gate value ($m),2.7
+170,3,Queensland,Muskmelons - Production (t),"22,914"
+171,3,Queensland,Muskmelons - Farm gate value ($m),34.2
+172,4,South Australia,Muskmelons - Production (t),"1,206"
+173,4,South Australia,Muskmelons - Farm gate value ($m),1.8
+174,5,Western Australia,Muskmelons - Production (t),"8,442"
+175,5,Western Australia,Muskmelons - Farm gate value ($m),12.6
+176,7,Northern Territory,Muskmelons - Production (t),"6,633"
+177,7,Northern Territory,Muskmelons - Farm gate value ($m),9.9
+180,1,New South Wales,Nashi - Production (t),43
+181,1,New South Wales,Nashi - Farm gate value ($m),0.1
+182,2,Victoria,Nashi - Production (t),"1,205"
+183,2,Victoria,Nashi - Farm gate value ($m),3.7
+184,4,South Australia,Nashi - Production (t),165
+185,4,South Australia,Nashi - Farm gate value ($m),0.5
+186,5,Western Australia,Nashi - Production (t),22
+187,5,Western Australia,Nashi - Farm gate value ($m),0.1
+190,1,New South Wales,Nectaries and peaches - Production (t),"5,093"
+191,1,New South Wales,Nectaries and peaches - Farm gate value ($m),19.0
+192,2,Victoria,Nectaries and peaches - Production (t),"47,192"
+193,2,Victoria,Nectaries and peaches - Farm gate value ($m),168.9
+194,3,Queensland,Nectaries and peaches - Production (t),"2,634"
+195,3,Queensland,Nectaries and peaches - Farm gate value ($m),10.0
+196,4,South Australia,Nectaries and peaches - Production (t),"4,152"
+197,4,South Australia,Nectaries and peaches - Farm gate value ($m),14.8
+198,5,Western Australia,Nectaries and peaches - Production (t),"2,967"
+199,5,Western Australia,Nectaries and peaches - Farm gate value ($m),11.4
+200,6,Tasmania,Nectaries and peaches - Production (t),164
+201,6,Tasmania,Nectaries and peaches - Farm gate value ($m),0.7
+204,1,New South Wales,Olives - Production (t),"8,646"
+205,1,New South Wales,Olives - Farm gate value ($m),10.7
+206,2,Victoria,Olives - Production (t),"69,521"
+207,2,Victoria,Olives - Farm gate value ($m),86.2
+208,3,Queensland,Olives - Production (t),724
+209,3,Queensland,Olives - Farm gate value ($m),0.9
+210,4,South Australia,Olives - Production (t),"10,958"
+211,4,South Australia,Olives - Farm gate value ($m),13.6
+212,5,Western Australia,Olives - Production (t),"10,556"
+213,5,Western Australia,Olives - Farm gate value ($m),13.1
+214,6,Tasmania,Olives - Production (t),131
+215,6,Tasmania,Olives - Farm gate value ($m),0.2
+218,1,New South Wales,Oranges - Production (t),"315,875"
+219,1,New South Wales,Oranges - Farm gate value ($m),259.2
+220,2,Victoria,Oranges - Production (t),"74,270"
+221,2,Victoria,Oranges - Farm gate value ($m),60.9
+222,3,Queensland,Oranges - Production (t),"4,235"
+223,3,Queensland,Oranges - Farm gate value ($m),3.5
+224,4,South Australia,Oranges - Production (t),"119,140"
+225,4,South Australia,Oranges - Farm gate value ($m),97.8
+226,5,Western Australia,Oranges - Production (t),"21,665"
+227,5,Western Australia,Oranges - Farm gate value ($m),17.8
+228,7,Northern Territory,Oranges - Production (t),0
+229,7,Northern Territory,Oranges - Farm gate value ($m),0.0
+232,3,Queensland,Papaya/Pawpaw - Production (t),"18,496"
+233,3,Queensland,Papaya/Pawpaw - Farm gate value ($m),33.1
+234,5,Western Australia,Papaya/Pawpaw - Production (t),"1,741"
+235,5,Western Australia,Papaya/Pawpaw - Farm gate value ($m),3.1
+236,7,Northern Territory,Papaya/Pawpaw - Production (t),"1,523"
+237,7,Northern Territory,Papaya/Pawpaw - Farm gate value ($m),2.7
+240,1,New South Wales,Passionfruit - Production (t),"1,633"
+241,1,New South Wales,Passionfruit - Farm gate value ($m),10.3
+242,2,Victoria,Passionfruit - Production (t),5
+243,2,Victoria,Passionfruit - Farm gate value ($m),0.0
+244,3,Queensland,Passionfruit - Production (t),"2,828"
+245,3,Queensland,Passionfruit - Farm gate value ($m),17.8
+246,4,South Australia,Passionfruit - Production (t),5
+247,4,South Australia,Passionfruit - Farm gate value ($m),0.0
+248,5,Western Australia,Passionfruit - Production (t),236
+249,5,Western Australia,Passionfruit - Farm gate value ($m),1.5
+250,7,Northern Territory,Passionfruit - Production (t),6
+251,7,Northern Territory,Passionfruit - Farm gate value ($m),0.0
+254,1,New South Wales,Pears - Production (t),925
+255,1,New South Wales,Pears - Farm gate value ($m),1.3
+256,2,Victoria,Pears - Production (t),"74,885"
+257,2,Victoria,Pears - Farm gate value ($m),102.1
+258,3,Queensland,Pears - Production (t),925
+259,3,Queensland,Pears - Farm gate value ($m),1.3
+260,4,South Australia,Pears - Production (t),"8,321"
+261,4,South Australia,Pears - Farm gate value ($m),11.4
+262,5,Western Australia,Pears - Production (t),"6,472"
+263,5,Western Australia,Pears - Farm gate value ($m),8.8
+264,6,Tasmania,Pears - Production (t),925
+265,6,Tasmania,Pears - Farm gate value ($m),1.3
+268,1,New South Wales,Persimmons - Production (t),729
+269,1,New South Wales,Persimmons - Farm gate value ($m),3.6
+270,2,Victoria,Persimmons - Production (t),911
+271,2,Victoria,Persimmons - Farm gate value ($m),4.5
+272,3,Queensland,Persimmons - Production (t),"1,276"
+273,3,Queensland,Persimmons - Farm gate value ($m),6.3
+274,4,South Australia,Persimmons - Production (t),547
+275,4,South Australia,Persimmons - Farm gate value ($m),2.7
+276,5,Western Australia,Persimmons - Production (t),182
+277,5,Western Australia,Persimmons - Farm gate value ($m),0.9
+280,3,Queensland,Pineapples - Production (t),"72,178"
+281,3,Queensland,Pineapples - Farm gate value ($m),76.0
+284,1,New South Wales,Plums - Production (t),"4,551"
+285,1,New South Wales,Plums - Farm gate value ($m),12.7
+286,2,Victoria,Plums - Production (t),"12,198"
+287,2,Victoria,Plums - Farm gate value ($m),34.0
+288,3,Queensland,Plums - Production (t),"1,217"
+289,3,Queensland,Plums - Farm gate value ($m),3.4
+290,4,South Australia,Plums - Production (t),"1,241"
+291,4,South Australia,Plums - Farm gate value ($m),3.5
+292,5,Western Australia,Plums - Production (t),"4,771"
+293,5,Western Australia,Plums - Farm gate value ($m),13.3
+294,6,Tasmania,Plums - Production (t),67
+295,6,Tasmania,Plums - Farm gate value ($m),0.2
+298,1,New South Wales,Rubus berries - Production (t),"2,455"
+299,1,New South Wales,Rubus berries - Farm gate value ($m),50.4
+300,2,Victoria,Rubus berries - Production (t),"2,775"
+301,2,Victoria,Rubus berries - Farm gate value ($m),57.0
+302,3,Queensland,Rubus berries - Production (t),"1,708"
+303,3,Queensland,Rubus berries - Farm gate value ($m),35.1
+304,4,South Australia,Rubus berries - Production (t),213
+305,4,South Australia,Rubus berries - Farm gate value ($m),4.4
+306,5,Western Australia,Rubus berries - Production (t),534
+307,5,Western Australia,Rubus berries - Farm gate value ($m),11.0
+308,6,Tasmania,Rubus berries - Production (t),"3,095"
+309,6,Tasmania,Rubus berries - Farm gate value ($m),63.5
+312,1,New South Wales,Strawberries - Production (t),658
+313,1,New South Wales,Strawberries - Farm gate value ($m),4.3
+314,2,Victoria,Strawberries - Production (t),"23,368"
+315,2,Victoria,Strawberries - Farm gate value ($m),152.4
+316,3,Queensland,Strawberries - Production (t),"27,646"
+317,3,Queensland,Strawberries - Farm gate value ($m),180.2
+318,4,South Australia,Strawberries - Production (t),"4,608"
+319,4,South Australia,Strawberries - Farm gate value ($m),30.0
+320,5,Western Australia,Strawberries - Production (t),"6,912"
+321,5,Western Australia,Strawberries - Farm gate value ($m),45.1
+322,6,Tasmania,Strawberries - Production (t),"2,633"
+323,6,Tasmania,Strawberries - Farm gate value ($m),17.2
+326,1,New South Wales,Table grapes - Production (t),"23,296"
+327,1,New South Wales,Table grapes - Farm gate value ($m),91.9
+328,2,Victoria,Table grapes - Production (t),"181,710"
+329,2,Victoria,Table grapes - Farm gate value ($m),716.5
+330,3,Queensland,Table grapes - Production (t),"11,648"
+331,3,Queensland,Table grapes - Farm gate value ($m),45.9
+332,4,South Australia,Table grapes - Production (t),"9,318"
+333,4,South Australia,Table grapes - Farm gate value ($m),36.7
+334,5,Western Australia,Table grapes - Production (t),"5,847"
+335,5,Western Australia,Table grapes - Farm gate value ($m),23.1
+336,7,Northern Territory,Table grapes - Production (t),"1,142"
+337,7,Northern Territory,Table grapes - Farm gate value ($m),4.5
+340,1,New South Wales,Watermelons - Production (t),"53,031"
+341,1,New South Wales,Watermelons - Farm gate value ($m),50.7
+342,2,Victoria,Watermelons - Production (t),"9,943"
+343,2,Victoria,Watermelons - Farm gate value ($m),9.5
+344,3,Queensland,Watermelons - Production (t),"56,346"
+345,3,Queensland,Watermelons - Farm gate value ($m),53.8
+346,4,South Australia,Watermelons - Production (t),"4,972"
+347,4,South Australia,Watermelons - Farm gate value ($m),4.8
+348,5,Western Australia,Watermelons - Production (t),"23,201"
+349,5,Western Australia,Watermelons - Farm gate value ($m),22.2
+350,7,Northern Territory,Watermelons - Production (t),"18,230"
+351,7,Northern Territory,Watermelons - Farm gate value ($m),17.4
+352,(t) Tonnes,,,
+353,($m) Millions of dollars,,,
+354,© Commonwealth of Australia,,,
