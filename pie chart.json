@@ -5,6 +5,7 @@
     "fontSize": 14,
     "anchor": "middle"
   },
+  "background": null,
   "data": {
     "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/refs/heads/main/Restructured_Nut_Data.csv",
     "format": {"type": "csv"}
@@ -31,7 +32,7 @@
   ],
   "transform": [
     {
-      "filter": "stateSelector == 'All' || datum.Region == stateSelector"
+      "filter": "stateSelector == 'All' ? datum.Region == 'Australia' : datum.Region == stateSelector"
     }
   ],
   "mark": {
