@@ -2,9 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Farm Gate Value by State (2022-23)",
-    "subtitle": "Excluding Australia and 'Total of Farm gate value'",
     "fontSize": 16,
-    "anchor": "start"
+    "anchor": "middle"
   },
   "data": {
     "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
