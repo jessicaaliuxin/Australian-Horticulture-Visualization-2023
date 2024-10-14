@@ -1,0 +1,34 @@
+,Region,Commodity,Production (t),Farm gate value ($m)
+0,Australia,Almonds,"103,381",523.4
+1,Australia,Chestnuts,"1,255",9.6
+2,New South Wales,Chestnuts,188,1.4
+3,Victoria,Chestnuts,879,6.7
+4,Queensland,Chestnuts,13,0.1
+5,South Australia,Chestnuts,63,0.5
+6,Western Australia,Chestnuts,50,0.4
+7,Tasmania,Chestnuts,63,0.5
+8,Australia,Hazelnuts,"1,450",6.4
+9,New South Wales,Hazelnuts,493,2.2
+10,Victoria,Hazelnuts,725,3.2
+11,South Australia,Hazelnuts,29,0.1
+12,Western Australia,Hazelnuts,29,0.1
+13,Tasmania,Hazelnuts,174,0.8
+14,Australia,Macadamias,"48,400",104.0
+15,New South Wales,Macadamias,"14,246",30.6
+16,Queensland,Macadamias,"34,154",73.4
+17,Australia,Pecans,"2,604",13.1
+18,New South Wales,Pecans,"2,187",11.0
+19,Queensland,Pecans,312,1.6
+20,South Australia,Pecans,26,0.1
+21,Western Australia,Pecans,78,0.4
+22,Australia,Pistachios,"1,400",15.9
+23,New South Wales,Pistachios,585,6.6
+24,Victoria,Pistachios,515,5.8
+25,South Australia,Pistachios,287,3.3
+26,Western Australia,Pistachios,14,0.2
+27,Australia,Walnuts,"8,000",20.3
+28,New South Wales,Walnuts,"5,200",13.2
+29,Victoria,Walnuts,720,1.8
+30,South Australia,Walnuts,80,0.2
+31,Western Australia,Walnuts,240,0.6
+32,Tasmania,Walnuts,"1,760",4.5
