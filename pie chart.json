@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Farm Gate Value by Nut Type in Different State",
+    "fontSize": 14,
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/refs/heads/main/Restructured_Nut_Data.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "stateSelector",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "name": "Select State: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "stateSelector == 'All' || datum.Region == stateSelector"
+    }
+  ],
+  "mark": {
+    "type": "arc",
+    "innerRadius": 0 
+  },
+  "encoding": {
+    "theta": {
+      "field": "Farm gate value ($m)",
+      "type": "quantitative",
+      "aggregate": "sum"
+    },
+    "color": {
+      "field": "Commodity",
+      "type": "nominal",
+      "legend": {"title": "Nut Type"}
+    },
+    "tooltip": [
+      {"field": "Region", "type": "nominal", "title": "State"},
+      {"field": "Commodity", "type": "nominal", "title": "Nut Type"},
+      {
+        "field": "Farm gate value ($m)",
+        "type": "quantitative",
+        "title": "Total Farm Gate Value ($m)"
+      }
+    ]
+  }
+}
