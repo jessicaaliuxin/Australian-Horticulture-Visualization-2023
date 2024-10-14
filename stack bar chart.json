@@ -44,8 +44,8 @@
       "field": "Data item",
       "type": "nominal",
       "legend": {
-        "title": "Data Item,
-        "offset": -5 "
+        "title": "Data Item",
+        "offset": -5           // 向左移动以减少遮挡
       }
     },
     "tooltip": [
