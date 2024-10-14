@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australian Horticulture Summary (2022-23) by State",
+  "width": 800,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/ne_10m_admin_1_states_provinces.json",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_10m_admin_1_states_provinces"
+    }
+  },
+  "projection": {
+    "type": "mercator",
+    "scale": 700,
+    "center": [134, -28]
+  },
+  "mark": {
+    "type": "geoshape",
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "transform": [
+    {
+      "lookup": "properties.name_en",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "Region",
+        "fields": ["2022-23"]
+      }
+    }
+  ],
+  "encoding": {
+    "color": {
+      "field": "2022-23",
+      "type": "quantitative",
+      "scale": {
+        "domain": [0, 1000, 3000, 5000],
+        "range": ["#d9f0a3", "#addd8e", "#31a354", "#006837"]
+      },
+      "legend": {"title": "Farm Gate Value ($m)"}
+    },
+    "tooltip": [
+      {"field": "properties.name_en", "type": "nominal", "title": "State"},
+      {"field": "2022-23", "type": "quantitative", "title": "Farm Gate Value ($m)"}
+    ]
+  }
+}
