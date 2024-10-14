@@ -44,7 +44,8 @@
       "field": "Data item",
       "type": "nominal",
       "legend": {
-        "title": "Data Item"
+        "title": "Data Item,
+        "offset": -5 "
       }
     },
     "tooltip": [
