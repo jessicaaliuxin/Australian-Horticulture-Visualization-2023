@@ -1,6 +1,6 @@
 {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "title": null, // 移除图表内部的标题
+        "title": null, 
         "width": 800,
         "height": 500,
         "background": null,
