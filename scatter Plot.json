@@ -38,7 +38,7 @@
       },
       "legend": {
         "orient": "right",
-        "offset": 50  
+        "offset": 55  
       }
     },
 
@@ -48,7 +48,7 @@
       "title": "Commodity",
       "legend": {
         "orient": "right",
-        "offset": 50
+        "offset": 55
       }
     },
     "tooltip": [
