@@ -49,7 +49,7 @@
       "field": "Commodity",
       "type": "nominal",
       "legend": {"title": "Nut Type",
-      "offset": 50 }
+      "offset": 40 }
     },
     "tooltip": [
       {"field": "Region", "type": "nominal", "title": "State"},
