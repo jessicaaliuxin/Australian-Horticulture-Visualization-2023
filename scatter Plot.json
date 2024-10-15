@@ -16,7 +16,7 @@
       "type": "quantitative",
       "title": "Production (tons)",
       "axis": {
-        "gridColor": "#ae9191",   
+        "gridColor": "#689f78",   
         "gridWidth": 1.5          
       }
     },
@@ -25,7 +25,7 @@
       "type": "quantitative",
       "title": "Farm gate value (million $)",
       "axis": {
-        "gridColor":  "#ae9191",  
+        "gridColor":  "#689f78",  
         "gridWidth": 1.5         
       }
     },
