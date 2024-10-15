@@ -1,241 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aussie Horticulture Summary</title>
-    <link rel="stylesheet" href="styles.css"> <https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/refs/heads/main/style.css>
+    <title>Australian Horticulture Summary (2022-23)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        #filter {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
+
 <body>
 
-<h1>Aussie Horticulture Summary (2022-23) by State</h1>
+    <!-- title -->
+    <div class="title">Horticultural Crop Production and Value Estimates in Australia</div>
 
-<label for="state-select">Choose a state:</label>
-<select id="state-select">
-    <option value="All">All</option>
-    <option value="New South Wales">New South Wales</option>
-    <option value="Victoria">Victoria</option>
-    <option value="Queensland">Queensland</option>
-    <option value="South Australia">South Australia</option>
-    <option value="Western Australia">Western Australia</option>
-    <option value="Tasmania">Tasmania</option>
-    <option value="Northern Territory">Northern Territory</option>
-</select>
+    <div class="container">
+        <!-- left: Vega-Lite visualisation -->
+        <div class="visualization">
+            <div id="vis"></div>
+        </div>
 
-<div id="map"></div>
-<div id="bar-chart"></div>
-<div id="pie-chart"></div>
+        <!-- right: description -->
+        <div class="description">
+            <h2 class="description-title">Horticulture Summary Estimates</h2>
+            <p>
+                This map visualizes the <strong>total farm gate values of Australia's horticultural industry for 2022-23</strong>, comparing contributions by state. <strong>Darker green areas</strong>, such as Victoria, New South Wales, and Queensland, represent higher production values, while <strong>lighter green areas</strong> indicate lower contributions from states like Tasmania and Northern Territory. The data covers key agricultural categories: fruits (excluding wine grapes), wine grapes, vegetables, nuts, and cut flowers, nurseries, and turf. This visualization offers a clear overview of the regional economic impact of Australia's horticulture sector.
+            </p>
+        </div>
+    </div>
 
-<script>
-    const initialState = "All"; // initial states set as all
+    <hr>
 
-    // map
-    const mapSpec = (state) => ({
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "title": "Australian Horticulture Summary (2022-23) by State",
-        "width": 800,
-        "height": 450,
-        "projection": {"type": "mercator"},
-        "data": {
-            "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
-            "format": {"type": "csv"}
-        },
-        "transform": [
-            {
-                "calculate": "datum['2022-23']",
-                "as": "FarmGateValue"
-            },
-            {
-                "filter": {
-                    "field": "Region",
-                    "oneOf": state === "All" ? [
-                        "New South Wales", 
-                        "Victoria", 
-                        "Queensland", 
-                        "South Australia", 
-                        "Western Australia", 
-                        "Tasmania", 
-                        "Northern Territory"
-                    ] : [state]
-                }
-            },
-            {
-                "lookup": "Region",
-                "from": {
-                    "data": {
-                        "values": [
-                            {"Region": "New South Wales", "Longitude": 151.2093, "Latitude": -33.8688},
-                            {"Region": "Victoria", "Longitude": 144.9631, "Latitude": -37.8136},
-                            {"Region": "Queensland", "Longitude": 153.0290, "Latitude": -27.4701},
-                            {"Region": "South Australia", "Longitude": 138.6010, "Latitude": -34.9285},
-                            {"Region": "Western Australia", "Longitude": 115.8575, "Latitude": -31.9505},
-                            {"Region": "Tasmania", "Longitude": 147.4390, "Latitude": -42.8821},
-                            {"Region": "Northern Territory", "Longitude": 133.7751, "Latitude": -12.4634}
-                        ]
-                    },
-                    "key": "Region",
-                    "fields": ["Longitude", "Latitude"]
-                }
-            }
-        ],
-        "layer": [
-            {
-                "data": {
-                    "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/ne_110m.json",
-                    "format": {
-                        "type": "topojson",
-                        "feature": "ne_110m_admin_0_countries"
-                    }
-                },
-                "mark": {"type": "geoshape", "fill": "#eee", "stroke": "gray"},
-                "encoding": {
-                    "tooltip": [
-                        {"field": "properties.NAME", "type": "nominal", "title": "Country"}
-                    ]
-                }
-            },
-            {
-                "mark": "circle",
-                "encoding": {
-                    "longitude": {"field": "Longitude", "type": "quantitative"},
-                    "latitude": {"field": "Latitude", "type": "quantitative"},
-                    "size": {
-                        "field": "FarmGateValue",
-                        "type": "quantitative",
-                        "scale": {"range": [100, 1000]},
-                        "legend": {"title": "Farm Gate Value ($m)"}
-                    },
-                    "color": {
-                        "field": "FarmGateValue",
-                        "type": "quantitative",
-                        "scale": {
-                            "domain": [0, 6000],
-                            "range": ["#fee5d9", "#99000d"]
-                        },
-                        "legend": {"title": "Farm Gate Value ($m)"}
-                    },
-                    "tooltip": [
-                        {"field": "Region", "type": "nominal", "title": "State"},
-                        {"field": "FarmGateValue", "type": "quantitative", "title": "Farm Gate Value ($m)"}
-                    ]
-                }
-            }
-        ]
-    });
+    <div class="container">
+        <!-- Below: Bar Chart  -->
+        <div class="visualization">
+            <div id="stacked-bar" style="width: 500px; height: 400px;"></div>
+        </div>
 
-    // bar chart
-    const barChartSpec = (state) => ({
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "title": "Farm Gate Value by State",
-        "width": 800,
-        "height": 400,
-        "data": {
-            "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
-            "format": {"type": "csv"}
-        },
-        "transform": [
-            {
-                "calculate": "datum['2022-23']",
-                "as": "FarmGateValue"
-            },
-            {
-                "filter": {
-                    "field": "Region",
-                    "oneOf": state === "All" ? [
-                        "New South Wales", 
-                        "Victoria", 
-                        "Queensland", 
-                        "South Australia", 
-                        "Western Australia", 
-                        "Tasmania", 
-                        "Northern Territory"
-                    ] : [state]
-                }
-            }
-        ],
-        "mark": "bar",
-        "encoding": {
-            "x": {
-                "field": "Region", 
-                "type": "ordinal",
-                "axis": {"title": "State"}
-            },
-            "y": {
-                "field": "FarmGateValue", 
-                "type": "quantitative",
-                "axis": {"title": "Farm Gate Value ($m)"}
-            },
-            "color": {
-                "field": "FarmGateValue", 
-                "type": "quantitative",
-                "scale": {
-                    "domain": [0, 6000],
-                    "range": ["#fee5d9", "#99000d"]
-                }
-            },
-            "tooltip": [
-                {"field": "Region", "type": "nominal", "title": "State"},
-                {"field": "FarmGateValue", "type": "quantitative", "title": "Farm Gate Value ($m)"}
-            ]
-        }
-    });
+        <!-- right: description -->
+        <div class="description">
+            <h2 class="description-title">Farm Gate Value by State (2022-23)</h2>
+            <p>
+                This bar chart presents the <strong>all farm gate values across different Australian states for the year 2022-23</strong>, excluding totals for Australia as a whole. The data is categorized by key horticultural sectors, including <strong>cut flowers, nurseries, and turf; fruit</strong> (excluding wine grapes); <strong>nuts</strong>; <strong>vegetables</strong>; and <strong>wine grapes</strong>. Each state’s contribution to the national farm gate value is visualized through a stacked bar, highlighting the relative importance of each horticultural category within the states. Notable findings include <strong>Queensland’s</strong> strong performance in fruits and <strong>Victoria's</strong> significant value in both fruits and vegetables.
+            </p>
+        </div>
+    </div>
 
-    // pie chart
-const pieChartSpec = () => ({
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Farm Gate Value Distribution by State",
-    "width": 400,
-    "height": 400,
-    "data": {
-        "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/Table_1_cleaned.csv",
-        "format": {"type": "csv"}
-    },
-    "transform": [
-        {
-            "calculate": "datum['2022-23']",
-            "as": "FarmGateValue"
-        }
-    ],
-    "mark": {"type": "arc", "innerRadius": 50}, // Creating a donut chart using innerRadius
-    "encoding": {
-        "theta": {"field": "FarmGateValue", "type": "quantitative"},
-        "color": {"field": "Region", "type": "nominal"},
-        "tooltip": [
-            {"field": "Region", "type": "nominal", "title": "State"},
-            {"field": "FarmGateValue", "type": "quantitative", "title": "Farm Gate Value ($m)"}
-        ]
-    }
-});
+    <hr>
 
+    <div class="container">
+        <!-- Below: Pie Chart -->
+        <div class="visualization">
+            <div id="pie-chart" style="width: 500px; height: 400px;"></div>
+        </div>
 
-function renderVisualizations(state) {
-    vegaEmbed('#map', mapSpec(state)).then(result => {}).catch(console.error);
-    vegaEmbed('#bar-chart', barChartSpec(state)).then(result => {}).catch(console.error);
-    vegaEmbed('#pie-chart', pieChartSpec()).then(result => {}).catch(console.error);
-}
+        <!-- right: description -->
+        <div class="description">
+            <h2 class="description-title">Farm Gate Value by Nut Type </h2>
+            <p>
+              This pie chart displays the <strong>farm gate value proportions of different nut types across Australian states</strong>, providing insights into the distribution of nut production. Each nut type is represented by a distinct color, showcasing the production value of various nuts. <strong>Almonds dominate the chart</strong>, indicating their overwhelming contribution and leading role in the Australian nut market. The chart also includes an interactive dropdown feature, allowing users to <strong>select specific states</strong> to view nut production data. Notably, <strong>the Northern Territory does not produce any nuts</strong>, so no data will be displayed when this state is selected.
+            </p>
+        </div>
+    </div>
 
+    <hr>
 
-    // Initial Render
-    renderVisualizations(initialState);
+    <!-- Scatter Plot Visualization Section - Moved to the End -->
+    <div class="container">
+        <div class="visualization">
+            <div id="scatter-plot" style="width: 500px; height: 400px;"></div>
+        </div>
 
-    // Monitor drop-down menu changes
-    document.getElementById('state-select').addEventListener('change', function() {
-        const selectedState = this.value;
-        renderVisualizations(selectedState);
-    });
+        <div class="description">
+            <h2 class="description-title">Production vs Farm Gate Value</h2>
+            <p>
+                This scatter plot illustrates the <strong>relationship between production (in tons) and farm gate value (in million dollars)</strong> for various commodities across Australian states in 2022-23. The color(different state) and shape(different products) help distinguish different regions and commodities respectively.This scatter plot highlights the performance of <strong>different states in nut production</strong>.<strong>Victoria</strong> excels in walnuts and pistachios, while <strong>New South Wales</strong> leads in pecans. The size of each point reflects production volume, illustrating the relationship between production and market value.
+            </p>
+        </div>
+    </div>
 
-</script>
+    <hr>
+
+    <script type="text/javascript">
+        // Render Vega-Lite specification for the map directly from GitHub JSON file
+        vegaEmbed('#vis', "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/summary.json").then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        // Render Vega-Lite specification for the stacked bar chart directly from GitHub JSON file
+        vegaEmbed('#stacked-bar', "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/main/stack%20bar%20chart.json", {
+            width: 500, // Adjust width
+            height: 400 // Adjust height
+        }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        // Render Vega-Lite specification for the pie chart directly from GitHub JSON file
+        vegaEmbed('#pie-chart', "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/refs/heads/main/pie%20chart.json", {
+            width: 500, // Adjust width
+            height: 430 // Adjust height
+        }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        // Render Vega-Lite specification for the scatter plot directly from GitHub JSON file
+        vegaEmbed('#scatter-plot', "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/refs/heads/main/scatter%20Plot.json", {
+            width: 430, // Adjust width
+            height: 400 // Adjust height
+        }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+    </script>
+
+    <div class="footer">
+        <p><strong>Data source</strong>: <a href="https://www.abs.gov.au/statistics/industry/agriculture/australian-agriculture-horticulture/latest-release">https://www.abs.gov.au/statistics/industry/agriculture/australian-agriculture-horticulture/latest-release</a></p>
+        <p><strong>Author</strong>: <strong>Xin Liu</strong></p>
+    </div>
 
 </body>
+
 </html>
