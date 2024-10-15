@@ -1,26 +1,40 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Scatter plot of production vs. farm gate value for nut commodities across Australian regions with a transparent background.",
+  "description": "Scatter plot of production vs. farm gate value for nut",
   "data": {
     "url": "https://raw.githubusercontent.com/jessicaaliuxin/Australian-Horticulture-Visualization-2023/refs/heads/main/Restructured_Nut_Data.csv",
     "format": {"type": "csv"}
   },
-  "mark": "point",
+  "mark": {
+    "type": "point",
+    "size": 100 
+  },
   "encoding": {
     "x": {
       "field": "Production (t)",
       "type": "quantitative",
-      "title": "Production (tons)"
+      "title": "Production (tons)",
+      "axis": {
+        "gridColor": "black",   
+        "gridWidth": 1.5        
+      }
     },
     "y": {
       "field": "Farm gate value ($m)",
       "type": "quantitative",
-      "title": "Farm gate value (million $)"
+      "title": "Farm gate value (million $)",
+      "axis": {
+        "gridColor": "black",   
+        "gridWidth": 1.5       
+      }
     },
     "color": {
       "field": "Region",
       "type": "nominal",
-      "title": "Region"
+      "title": "Region",
+      "scale": {
+        "scheme": "category10"  
+      }
     },
     "shape": {
       "field": "Commodity",
@@ -35,6 +49,11 @@
     ]
   },
   "config": {
-    "background": null
+    "background": "null",
+    "axis": {
+      "labelFontSize": 12,        
+      "titleFontSize": 14,       
+      "grid": true                
+    }
   }
 }
