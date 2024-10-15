@@ -64,12 +64,7 @@
   },
   "config": {
     "view": {
-      "padding": {"top": 60}
-    },
-    "legend": {
-      "titleFontSize": 12,
-      "labelFontSize": 12,
-      "symbolSize": 100  // Optional: Adjust legend symbol size for better aesthetics
+      "padding": {"top": 50} 
     }
   }
 }
