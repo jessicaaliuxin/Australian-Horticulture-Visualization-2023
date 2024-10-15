@@ -16,8 +16,8 @@
       "type": "quantitative",
       "title": "Production (tons)",
       "axis": {
-        "gridColor": "#ae9191",
-        "gridWidth": 1.5
+        "gridColor": "#ae9191",   
+        "gridWidth": 1.5          
       }
     },
     "y": {
@@ -25,8 +25,8 @@
       "type": "quantitative",
       "title": "Farm gate value (million $)",
       "axis": {
-        "gridColor": "#ae9191",
-        "gridWidth": 1.5
+        "gridColor":  "#ae9191",   
+        "gridWidth": 1.5          
       }
     },
     "color": {
@@ -35,20 +35,12 @@
       "title": "Region",
       "scale": {
         "scheme": "category10"
-      },
-      "legend": {
-        "orient": "right",
-        "offset": 50   // Move the Region legend 100 units to the right
       }
     },
     "shape": {
       "field": "Commodity",
       "type": "nominal",
-      "title": "Nuts",
-      "legend": {
-        "orient": "right",
-        "offset": 50   // Move the Commodity legend 100 units to the right
-      }
+      "title": "Commodity"
     },
     "tooltip": [
       {"field": "Region", "type": "nominal"},
@@ -58,12 +50,12 @@
     ]
   },
   "config": {
-    "background": null,
+    "background": null,           
     "axis": {
-      "labelFontSize": 12,
-      "titleFontSize": 14,
-      "grid": true,
-      "gridDash": [1, 0]
+      "labelFontSize": 12,        
+      "titleFontSize": 14,        
+      "grid": true,               
+      "gridDash": [1, 0]         
     }
   }
 }
