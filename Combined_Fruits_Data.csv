@@ -1,0 +1,65 @@
+Region,Fruit,Farm gate value ($m),Production (t)
+New South Wales,Apples,88.4,"38,953"
+New South Wales,Avocados,63.0,"12,966"
+New South Wales,Bananas,23.3,"14,970"
+New South Wales,Blueberries,361.4,"17,301"
+New South Wales,Custard Apples,4.3,641
+New South Wales,Dried grapes,5.0,"2,411"
+New South Wales,Mangoes,2.1,740
+New South Wales,Oranges,259.2,"315,875"
+New South Wales,Pears,1.3,925
+New South Wales,Rubus berries,50.4,"2,455"
+New South Wales,Strawberries,4.3,658
+New South Wales,Table grapes,91.9,"23,296"
+Northern Territory,Bananas,1.5,936
+Northern Territory,Mangoes,101.8,"36,675"
+Northern Territory,Oranges,0.0,0
+Northern Territory,Table grapes,4.5,"1,142"
+Queensland,Apples,68.2,"30,075"
+Queensland,Avocados,364.3,"74,957"
+Queensland,Bananas,548.3,"351,796"
+Queensland,Blueberries,15.8,758
+Queensland,Custard Apples,4.6,683
+Queensland,Mangoes,96.8,"34,883"
+Queensland,Oranges,3.5,"4,235"
+Queensland,Pears,1.3,925
+Queensland,Pineapples,76.0,"72,178"
+Queensland,Rubus berries,35.1,"1,708"
+Queensland,Strawberries,180.2,"27,646"
+Queensland,Table grapes,45.9,"11,648"
+South Australia,Apples,61.8,"27,256"
+South Australia,Avocados,14.6,"2,994"
+South Australia,Blueberries,2.1,101
+South Australia,Dried grapes,0.9,426
+South Australia,Mangoes,0.1,28
+South Australia,Oranges,97.8,"119,140"
+South Australia,Pears,11.4,"8,321"
+South Australia,Rubus berries,4.4,213
+South Australia,Strawberries,30.0,"4,608"
+South Australia,Table grapes,36.7,"9,318"
+Tasmania,Apples,67.0,"29,523"
+Tasmania,Avocados,0.3,70
+Tasmania,Blueberries,25.3,"1,213"
+Tasmania,Pears,1.3,925
+Tasmania,Rubus berries,63.5,"3,095"
+Tasmania,Strawberries,17.2,"2,633"
+Victoria,Apples,295.3,"130,177"
+Victoria,Avocados,17.6,"3,615"
+Victoria,Blueberries,8.4,404
+Victoria,Dried grapes,23.7,"11,347"
+Victoria,Mangoes,0.2,73
+Victoria,Oranges,60.9,"74,270"
+Victoria,Pears,102.1,"74,885"
+Victoria,Rubus berries,57.0,"2,775"
+Victoria,Strawberries,152.4,"23,368"
+Victoria,Table grapes,716.5,"181,710"
+Western Australia,Apples,66.2,"29,193"
+Western Australia,Avocados,101.0,"20,782"
+Western Australia,Bananas,10.2,"6,549"
+Western Australia,Blueberries,9.1,435
+Western Australia,Mangoes,6.9,"2,501"
+Western Australia,Oranges,17.8,"21,665"
+Western Australia,Pears,8.8,"6,472"
+Western Australia,Rubus berries,11.0,534
+Western Australia,Strawberries,45.1,"6,912"
+Western Australia,Table grapes,23.1,"5,847"
