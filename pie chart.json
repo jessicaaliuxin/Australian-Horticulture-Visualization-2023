@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Farm Gate Value by Nut Type in Different State",
-    "fontSize": 16,
+    "fontSize": 14,
     "anchor": "start"
   },
   "background": null,
@@ -61,10 +61,5 @@
         "title": "Total Farm Gate Value ($m)"
       }
     ]
-  },
-  "config": {
-    "view": {
-      "padding": {"top": 50} 
-    }
   }
 }
