@@ -33,6 +33,7 @@
       "field": "Region",
       "type": "nominal",
       "title": "Region",
+      "offset": 50,
       "scale": {
         "scheme": "category10"
       }
@@ -40,7 +41,8 @@
     "shape": {
       "field": "Commodity",
       "type": "nominal",
-      "title": "Commodity"
+      "title": "Nuts",
+      "offset": 50
     },
     "tooltip": [
       {"field": "Region", "type": "nominal"},
