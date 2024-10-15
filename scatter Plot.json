@@ -62,7 +62,7 @@
     "background": null,          
     "axis": {
       "labelFontSize": 12,       
-      "titleFontSize": 14,        
+      "titleFontSize": 12,        
       "grid": true,              
       "gridDash": [1, 0]         
     }
