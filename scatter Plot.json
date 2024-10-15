@@ -7,7 +7,8 @@
   },
   "mark": {
     "type": "point",
-    "size": 100  
+    "size": 400,
+    "filled": true
   },
   "encoding": {
     "x": {
@@ -15,8 +16,8 @@
       "type": "quantitative",
       "title": "Production (tons)",
       "axis": {
-        "gridColor": "#000000",   
-        "gridWidth": 1.5         
+        "gridColor": "#ae9191",   
+        "gridWidth": 1.5        
       }
     },
     "y": {
@@ -24,7 +25,7 @@
       "type": "quantitative",
       "title": "Farm gate value (million $)",
       "axis": {
-        "gridColor": "#000000",   
+        "gridColor":  "#ae9191",   
         "gridWidth": 1.5          
       }
     },
@@ -54,7 +55,7 @@
       "labelFontSize": 12,        
       "titleFontSize": 14,        
       "grid": true,              
-      "gridDash": [1, 0]         
+      "gridDash": [1, 0]          
     }
   }
 }
