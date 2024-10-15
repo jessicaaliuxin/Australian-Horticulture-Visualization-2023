@@ -17,7 +17,7 @@
       "title": "Production (tons)",
       "axis": {
         "gridColor": "#689f78",   
-        "gridWidth": 1.5          
+        "gridWidth": 1        
       }
     },
     "y": {
@@ -26,7 +26,7 @@
       "title": "Farm gate value (million $)",
       "axis": {
         "gridColor":  "#689f78",  
-        "gridWidth": 1.5         
+        "gridWidth": 1       
       }
     },
     "color": {
