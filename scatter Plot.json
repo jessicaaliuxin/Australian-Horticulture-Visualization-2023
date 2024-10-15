@@ -7,7 +7,7 @@
   },
   "mark": {
     "type": "point",
-    "size": 100  
+    "size": 100  // 调整图标大小
   },
   "encoding": {
     "x": {
@@ -15,8 +15,8 @@
       "type": "quantitative",
       "title": "Production (tons)",
       "axis": {
-        "gridColor": "black",   
-        "gridWidth": 1.5        
+        "gridColor": "#000000",   // 设置网格线的颜色为黑色
+        "gridWidth": 1.5          // 调整网格线的宽度
       }
     },
     "y": {
@@ -24,8 +24,8 @@
       "type": "quantitative",
       "title": "Farm gate value (million $)",
       "axis": {
-        "gridColor": "black",   
-        "gridWidth": 1.5       
+        "gridColor": "#000000",   // 设置网格线的颜色为黑色
+        "gridWidth": 1.5          // 调整网格线的宽度
       }
     },
     "color": {
@@ -33,7 +33,7 @@
       "type": "nominal",
       "title": "Region",
       "scale": {
-        "scheme": "category10"  
+        "scheme": "category10"
       }
     },
     "shape": {
@@ -49,11 +49,12 @@
     ]
   },
   "config": {
-    "background": null,           
+    "background": null,           // 背景设置为透明
     "axis": {
-      "labelFontSize": 12,        
-      "titleFontSize": 14,       
-      "grid": true               
+      "labelFontSize": 12,        // 调整轴标签字体大小
+      "titleFontSize": 14,        // 调整轴标题字体大小
+      "grid": true,               // 确保显示网格线
+      "gridDash": [1, 0]          // 使用实线样式（没有虚线）
     }
   }
 }
