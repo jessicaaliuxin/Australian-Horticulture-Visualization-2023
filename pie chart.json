@@ -3,7 +3,7 @@
   "title": {
     "text": "Farm Gate Value by Nut Type in Different State",
     "fontSize": 14,
-    "anchor": "middle"
+    "anchor": "start"
   },
   "background": null,
   "data": {
@@ -48,7 +48,8 @@
     "color": {
       "field": "Commodity",
       "type": "nominal",
-      "legend": {"title": "Nut Type"}
+      "legend": {"title": "Nut Type",
+      "offset": 50 }
     },
     "tooltip": [
       {"field": "Region", "type": "nominal", "title": "State"},
